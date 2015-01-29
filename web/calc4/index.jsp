@@ -19,7 +19,7 @@
         <nav class="navbar	navbar-default	navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand">Mike - Calculator v3</a>
+                    <a href="#" class="navbar-brand">Mike - Calculator v4</a>
 
                     <button type="button" class="navbar-toggle" data-toggle="collapse" datatarget="#collapse-menu">
                         <span class="sr-only">Toggle	navigation</span>
@@ -80,17 +80,7 @@
                 </div>
             </div>
         </div>
-        <%
-
-            Object returnArea = request.getAttribute("area");
-            String message = null;
-            if (returnArea == null) {
-                returnArea = "";
-            } else {
-                returnArea = (String) returnArea;
-            }
-            out.print("<center><h1>" + returnArea + "</h1></center>");
-        %>
+        <h1>${area}</h1>
         <script src="<%= request.getContextPath()%>/js/jquery-1.10.2.min.js"></script>
         <script src="<%= request.getContextPath()%>/js/bootstrap.min.js"></script>
     </body>

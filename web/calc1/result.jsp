@@ -16,7 +16,7 @@
         <nav class="navbar	navbar-default	navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand">Mike</a>
+                    <a href="#" class="navbar-brand">Mike - Calculator v1 - Result</a>
 
                     <button type="button" class="navbar-toggle" data-toggle="collapse" datatarget="#collapse-menu">
                         <span class="sr-only">Toggle	navigation</span>
@@ -34,6 +34,7 @@
                                 <li><a href="<%= request.getContextPath()%>/calc1/index.jsp">Calculator v1</a></li>
                                 <li><a href="<%= request.getContextPath()%>/calc2/index.jsp">Calculator v2</a></li>
                                 <li><a href="<%= request.getContextPath()%>/calc3/index.jsp">Calculator v3</a></li>
+                                <li><a href="<%= request.getContextPath()%>/calc4/index.jsp">Calculator v4</a></li>
                             </ul>
                     </ul>
 
@@ -49,7 +50,7 @@
                 returnArea = (String) returnArea;
             }
             out.print("<center><h1>" + returnArea + "</h1></center>");
-%>
+        %>
         <script src="<%= request.getContextPath()%>/js/jquery-1.10.2.min.js"></script>
         <script src="<%= request.getContextPath()%>/js/bootstrap.min.js"></script>
     </body>

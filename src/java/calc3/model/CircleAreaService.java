@@ -11,9 +11,19 @@ import common.model.*;
  *
  * @author mdufek1
  */
-public class CircleAreaService {
-    
+public class CircleAreaService{
+    private String outputText= "Circle Area: ";
     public String getArea(double radius){
-        return "Circle Area: "+(Math.PI*radius);
+        return outputText+(Math.PI*radius);
     }
+
+    public String getOutputText() {
+        return outputText;
+    }
+
+    public void setOutputText(String outputText) {
+        this.outputText = outputText;
+    }
+    
+    
 }

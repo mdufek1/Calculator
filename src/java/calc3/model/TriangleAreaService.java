@@ -11,9 +11,20 @@ import common.model.*;
  *
  * @author mdufek1
  */
-public class TriangleAreaService {
+public class TriangleAreaService implements PolygonAreaStrategy{
+    private String outputText= "Triangle Area: ";
     
+    @Override
     public String getArea(double base, double height){
-        return "Triangle Area: "+((height*base)/2);
+        return outputText+((height*base)/2);
     }
+
+    public String getOutputText() {
+        return outputText;
+    }
+
+    public void setOutputText(String outputText) {
+        this.outputText = outputText;
+    }
+    
 }

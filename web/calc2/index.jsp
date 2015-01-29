@@ -46,22 +46,14 @@
             <label for="height">Height:</label><input type="number" name="height" id="height" value="" />
             <input type="submit" name="submit" id="submit" value="Submit" />
             <%
-                // the getAttribute method returns a plain object, not a String or other type
                 Object returnArea = request.getAttribute("area");
                 String message = null;
-                // cannot cast if null
                 if (returnArea == null) {
-    // do something so program doesn't crash, like
-                    // here we create a list with an error message
                     returnArea = "";
                 } else {
-                    // cast it
                     returnArea = (String) returnArea;
                 }
                 out.print("<center><h1>" + returnArea + "</h1></center>");
-
-// THIS CODE IS OVERLY COMPLICATED and FRAGILE!!!
-                // See result2.jsp for a better way
 %>
         </form>
         <script src="<%= request.getContextPath()%>/js/jquery-1.10.2.min.js"></script>

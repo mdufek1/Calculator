@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rectangle Area Calculator</title>
+        <title>Multi-Shape Area Calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="<%= request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -80,22 +80,14 @@
     </div>
         </div>
         <%
-            // the getAttribute method returns a plain object, not a String or other type
             Object returnArea = request.getAttribute("area");
             String message = null;
-            // cannot cast if null
             if (returnArea == null) {
-                // do something so program doesn't crash, like
-                // here we create a list with an error message
                 returnArea = "";
             } else {
-                // cast it
                 returnArea = (String) returnArea;
             }
             out.print("<center><h1>" + returnArea + "</h1></center>");
-
-        // THIS CODE IS OVERLY COMPLICATED and FRAGILE!!!
-            // See result2.jsp for a better way
 %>
         <script src="<%= request.getContextPath()%>/js/jquery-1.10.2.min.js"></script>
         <script src="<%= request.getContextPath()%>/js/bootstrap.min.js"></script>

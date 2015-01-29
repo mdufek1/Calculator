@@ -11,9 +11,24 @@ import common.model.*;
  *
  * @author mdufek1
  */
-public class RectangleAreaService {
+public class RectangleAreaService implements PolygonAreaStrategy {
+    private String outputText= "Rectangle Area: ";
     
+    
+    @Override
     public String getArea(double width, double height){
-        return "Rectangle Area: "+(width*height);
+        return outputText+(width*height);
     }
+
+    public String getOutputText() {
+        return outputText;
+    }
+
+    public void setOutputText(String outputText) {
+        this.outputText = outputText;
+    }
+
+
+    
+    
 }
